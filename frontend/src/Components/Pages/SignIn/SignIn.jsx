@@ -37,7 +37,7 @@ const SignIn = () => {
 
   return (
     <>
-      <h1 className="display-4">TicTacToe Multiplayer Game</h1>
+      <h1 className="display-4 title">TicTacToe Multiplayer Game</h1>
       <div className="signin-container">
         <h1>Sign In</h1>
         <form onSubmit={handleSignIn}>
@@ -75,15 +75,22 @@ const SignIn = () => {
                 cursor: "pointer",
               }}
             >
-              {isPasswordVisible ? <FaEye className="icon" /> : <FaEyeSlash className="icon" />}{" "}
+              {isPasswordVisible ? (
+                <FaEye className="icon" />
+              ) : (
+                <FaEyeSlash className="icon" />
+              )}{" "}
             </span>
           </div>
           <div className="signin-button">
             <button type="submit" className="btn btn-light text-dark">
-              Sign In
+              SignIn
             </button>
             <p>
-              Don't have an account? <Link to="/signup">Create an account</Link>
+              Don't have an account?{" "}
+              <Link to="/signup" className="text-decoration-none">
+                Create an account
+              </Link>
             </p>
           </div>
         </form>

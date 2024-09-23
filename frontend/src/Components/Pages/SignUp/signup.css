@@ -50,3 +50,47 @@ p {
     text-align: center;
     color: white;
 }
+
+@media (max-width: 992px) {
+    .signup-container {
+        max-width: 400px;
+        padding: 30px;
+    }
+
+    .btn {
+        width: 70%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        max-width: 350px;
+        padding: 25px;
+    }
+
+    .btn {
+        width: 75%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .signup-container {
+        max-width: 280px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}

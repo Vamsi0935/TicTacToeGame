@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 .signin-container {
     max-width: 500px;
     margin: 50px auto;
@@ -47,4 +49,60 @@ p {
     margin-top: 55%;
     margin-right: 70%;
     font-size: 18px;
+}
+
+.title {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (max-width: 992px) {
+    .signin-container {
+        max-width: 400px;
+        padding: 35px;
+    }
+
+    .btn {
+        width: 60%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .signin-container {
+        max-width: 300px;
+        padding: 30px;
+    }
+
+    .btn {
+        width: 70%;
+        font-size: 16px;
+    }
+
+    .icon {
+        margin-top: 45%;
+        margin-right: 60%;
+    }
+}
+
+@media (max-width: 576px) {
+    .signin-container {
+        max-width: 250px;
+        padding: 25px;
+    }
+
+    .btn {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .icon {
+        margin-top: 40%;
+        margin-right: 50%;
+    }
 }

@@ -34,7 +34,7 @@ const SignUp = () => {
 
   return (
     <>
-      <h1 className="display-4">TicTacToe Multiplayer Game</h1>
+      <h1 className="display-4 title">TicTacToe Multiplayer Game</h1>
       <div className="signup-container">
         <h1>Sign Up</h1>
         <form onSubmit={handleSignUp}>
@@ -79,10 +79,10 @@ const SignUp = () => {
           </div>
           <div className="signup-button">
             <button type="submit" className="btn btn-light text-dark">
-              Sign Up
+              SignUp
             </button>
             <p>
-              Already have an account? <Link to="/">Login here</Link>
+              Already have an account? <Link to="/" className="text-decoration-none">Login here</Link>
             </p>
           </div>
         </form>

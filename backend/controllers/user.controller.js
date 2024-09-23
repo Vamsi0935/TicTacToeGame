@@ -34,7 +34,6 @@ exports.registerUser = async (req, res) => {
       message: "User registered successfully",
     });
   } catch (err) {
-    //console.error(err.message);
     res.status(500).send("Server error");
   }
 };
@@ -63,21 +62,20 @@ exports.loginUser = async (req, res) => {
       .status(200)
       .json({ token, userId: user._id, message: "Login successful" });
   } catch (err) {
-    //console.error(err.message);
     res.status(500).send("Server error");
   }
 };
 
-// Get authenticated user's profile
-exports.getUserProfile = async (req, res) => {
-  try {
-    const user = await UserModel.findById(req.user.userId).select("-password");
-    res.status(200).json(user);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send("Server error");
-  }
-};
+// // Get authenticated user's profile
+// exports.getUserProfile = async (req, res) => {
+//   try {
+//     const user = await UserModel.findById(req.user.userId).select("-password");
+//     res.status(200).json(user);
+//   } catch (err) {
+//     console.error(err.message);
+//     res.status(500).send("Server error");
+//   }
+// };
 
 // Get all users
 exports.getAllUsers = async (req, res) => {

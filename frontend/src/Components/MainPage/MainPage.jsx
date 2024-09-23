@@ -72,6 +72,7 @@ const MainPage = () => {
     if (winner) {
       setFinishetState(winner);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameState]);
 
   const takePlayerName = async () => {
@@ -152,7 +153,7 @@ const MainPage = () => {
   if (playOnline && !opponentName) {
     return (
       <div className="waiting">
-        <p className="display-1">⌛Waiting for opponent......</p>
+        <p className="display-2">⌛Waiting for opponent......</p>
       </div>
     );
   }
@@ -201,10 +202,11 @@ const MainPage = () => {
           {finishedState &&
             finishedState !== "opponentLeftMatch" &&
             finishedState !== "draw" && (
-              <h3 className="finished-state">
-                {finishedState === playingAs ? "You " : finishedState} won the
-                game
-              </h3>
+              <h1 className="finished-state">
+                {finishedState === playingAs
+                  ? `${playerName} won the game!`
+                  : `${opponentName} won the game!`}
+              </h1>
             )}
           {finishedState &&
             finishedState !== "opponentLeftMatch" &&
@@ -216,7 +218,7 @@ const MainPage = () => {
           <h1>You are playing against {opponentName} </h1>
         )}
         {finishedState && finishedState === "opponentLeftMatch" && (
-          <h2>You won the match 🤝, Opponent has left</h2>
+          <h1>You won the match 🤝, Opponent has left</h1>
         )}
       </div>
     </div>

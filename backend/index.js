@@ -43,5 +43,5 @@ const io = new Server(httpServer, {
 require("./controllers/socketController")(io);
 
 httpServer.listen(5000, () => {
-  console.log("Server is running on port 5000....");
+  console.log("Server is running.....");
 });

@@ -97,3 +97,91 @@ body {
 .current-move-circle {
     background-color: #3fa7f0 !important;
 }
+
+@media (max-width: 992px) {
+    .main-div {
+        margin-top: 4vh;
+        padding: 15px;
+    }
+
+    .move-detection {
+        width: 350px;
+    }
+
+    .left,
+    .right {
+        width: 100px;
+        font-size: 16px;
+    }
+
+    .playOnline {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-div {
+        margin-top: 3vh;
+        padding: 15px;
+    }
+
+    .move-detection {
+        width: 300px;
+    }
+
+    .left,
+    .right {
+        width: 90px;
+        font-size: 14px;
+    }
+
+    .square-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .playOnline {
+        font-size: 45px;
+    }
+
+    .finished-state {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-div {
+        margin-top: 2vh;
+        /* padding: 10px; */
+    }
+
+    .move-detection {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .left,
+    .right {
+        width: 80px;
+        font-size: 12px;
+    }
+
+    .game-title {
+        font-size: 18px;
+    }
+
+    .square-wrapper {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 8px;
+        column-gap: 8px;
+    }
+
+    .playOnline {
+        font-size: 40px;
+    }
+
+    .finished-state {
+        font-size: 18px;
+    }
+}
