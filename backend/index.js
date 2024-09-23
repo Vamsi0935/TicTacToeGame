@@ -14,7 +14,8 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3000", "https://tic-tac-toe-game-seven-blond.vercel.app",
+    methods: ["GET", "POST"],
     credentials: true,
   })
 );
@@ -36,7 +37,7 @@ app.use("/api/users", userRoutes);
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://tic-tac-toe-game-seven-blond.vercel.app",
   },
 });
 
