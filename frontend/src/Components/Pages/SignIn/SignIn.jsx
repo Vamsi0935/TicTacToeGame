@@ -15,7 +15,7 @@ const SignIn = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/users/signin",
+        "https://tic-tac-toe-game-api-taupe.vercel.app/api/users/signin",
         { email, password }
       );
       Swal.fire({
