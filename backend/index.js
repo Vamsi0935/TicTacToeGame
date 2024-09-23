@@ -15,12 +15,18 @@ app.use(bodyParser.json());
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://tic-tac-toe-game-seven-blond.vercel.app",
+  "https://tic-tac-toe-game-seven-blond.vercel.app"
 ];
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: (origin, callback) => {
+      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
@@ -42,7 +48,8 @@ app.use("/api/users", userRoutes);
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: allowedOrigins,
+    credentials: true,
   },
 });
 
