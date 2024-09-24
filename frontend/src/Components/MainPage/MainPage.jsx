@@ -129,7 +129,7 @@ const MainPage = () => {
     const username = result.value;
     setPlayerName(username);
 
-    const newSocket = io("http://localhost:5000", {
+    const newSocket = io("https://tic-tac-toe-game-api-taupe.vercel.app", {
       autoConnect: true,
     });
 
